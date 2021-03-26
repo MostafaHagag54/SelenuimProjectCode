@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Free CRM Application Test" >
+    <listeners>
+        <listener class-name="listners.Listners">
+
+        </listener>
+    </listeners>
+    <parameter name="siteURL" value="http://automationpractice.com/index.php"></parameter>
+    <parameter name="logoXpath" value="//img[@src='http://automationpractice.com/img/logo.jpg']"></parameter>
+    <parameter name="signButtonTetx" value="Sign in"></parameter>
+    <parameter name="loginPageProveXpath" value="//h1[normalize-space()='Authentication']"></parameter>
+
+    <test thread-count="5" name="End to End Test">
+
+
+        <classes>
+            <class name="MainPage"></class>
+            <class name="LoginToFreeCRM"></class>
+        </classes>
+    </test>
+</suite>

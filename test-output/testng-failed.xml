@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Free CRM Application Test]" guice-stage="DEVELOPMENT">
+  <parameter name="siteURL" value="http://automationpractice.com/index.php"/>
+  <parameter name="signButtonTetx" value="Sign in"/>
+  <parameter name="loginPageProveXpath" value="//h1[normalize-space()=&#039;Authentication&#039;]"/>
+  <parameter name="logoXpath" value="//img[@src=&#039;http://automationpractice.com/img/logo.jpg&#039;]"/>
+  <listeners>
+    <listener class-name="listners.Listners"/>
+  </listeners>
+  <test thread-count="5" name="End to End Test(failed)">
+    <classes>
+      <class name="LoginToFreeCRM">
+        <methods>
+          <include name="precondtion"/>
+          <include name="login" invocation-numbers="1 2 3"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- LoginToFreeCRM -->
+    </classes>
+  </test> <!-- End to End Test(failed) -->
+</suite> <!-- Failed suite [Free CRM Application Test] -->
